@@ -4,8 +4,12 @@ async function process(){
     let afterHeading1=document.getElementById('afterHeading1');
     let afterHeading2=document.getElementById('afterHeading2');
     let afterHeading3=document.getElementById('afterHeading3');
-    let data= await fetch('https://api-test-server-1.onrender.com/api/websiteData');
+    let data= await fetch('http://127.0.0.1:35711/api/websiteData');
+    let rurl= await fetch('https://server-link.onrender.com/link');
     data=await data.json();
+    rurl=await rurl.text();
+    // rurl=await rurl.stringify();
+    console.log("type= ",typeof rurl, "data= ",rurl);
     data.forEach(obj => {
         let div=document.createElement('div');
         afterHeading1.append(div);
@@ -47,7 +51,7 @@ async function process(){
             console.log(damData);
             afterHeading2.innerHTML = `<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px;">${JSON.stringify(damData, null, 2)}</pre>`;
             let reqUrl=document.getElementById('reqUrl');
-            reqUrl.innerHTML = `<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px;">${obj.request_path}</pre>`;
+            reqUrl.innerHTML = `<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px;">${rurl}${obj.request_path}</pre>`;
 
         });
 
