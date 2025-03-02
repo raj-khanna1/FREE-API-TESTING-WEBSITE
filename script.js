@@ -4,10 +4,11 @@ async function process(){
     let afterHeading1=document.getElementById('afterHeading1');
     let afterHeading2=document.getElementById('afterHeading2');
     let afterHeading3=document.getElementById('afterHeading3');
-    let data= await fetch('http://127.0.0.1:35711/api/websiteData');
     let rurl= await fetch('https://server-link.onrender.com/link');
-    data=await data.json();
     rurl=await rurl.text();
+    let data= await fetch(`${rurl}api/websiteData`);
+    data=await data.json();
+
     // rurl=await rurl.stringify();
     console.log("type= ",typeof rurl, "data= ",rurl);
     data.forEach(obj => {
