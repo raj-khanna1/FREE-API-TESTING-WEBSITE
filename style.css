@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    background-color: #E1E195;
+}
+*{
+    margin: 0;
+}
+#mainBody{
+    background-color: #E1E195;
+    /* height: 100em; */
+}
+#navBar{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2%;
+    color: white;
+    width: 100%;
+}
+.navItems{
+    border-color: wheat;
+    /* border: 1px solid gold; */
+    padding: 2%;
+    font-size: large;
+    color: white;
+}
+.navItems:hover{
+    background-color: aqua;
+    color: black;
+}
+h1{
+    font-size: 3em;
+}
+#headerInfo{
+    padding-top: 8%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    display: flex;
+    color: white;
+}
+#msgSection{
+    background-color: #FFFDD5;
+    height: 10em;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+#apiSection{
+    margin: 8%;
+    border: 1px solid black;
+    /* height: 20em; */
+    display: flex;
+    
+}
+.columns{
+    /* width: 33.3%; */
+    flex: 1;
+    border-left: 1px solid gray;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    height: 8vh;
+    border-bottom: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+
+}
+h9{
+    font-size: 2.2vw;
+}
+h8{
+    font-size: 1.6vw;
+}
+.divis{
+    border-bottom: 1px solid blue;
+}
+.divis1{
+    padding: 2vw;
+}
+.divis2{
+    width: 100%;
+    padding: 5%;
+    font-size: 2vh;
+
+}
+pre{
+    font-size: 1.5vw;
+}
+#reqUrl{
+    border-bottom: 1px solid blue;
+}
+#reqUrl2{
+    border-bottom: 1px solid blue;
+}
+h11{
+    font-size: 2vw;
+}
