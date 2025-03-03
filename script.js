@@ -1,16 +1,17 @@
 // function which will run so that front end fetch the required data to show
-
+import {mthd} from './api_testing_website_data.js';
+let data=mthd.data;
 async function process(){
     let afterHeading1=document.getElementById('afterHeading1');
     let afterHeading2=document.getElementById('afterHeading2');
     let afterHeading3=document.getElementById('afterHeading3');
-    let rurl= await fetch('https://server-link.onrender.com/link');
-    rurl=await rurl.text();
-    let data= await fetch(`${rurl}api/websiteData`);
-    data=await data.json();
+    // let rurl= await fetch('https://server-link.onrender.com/link');
+    // rurl=await rurl.text();
+    // let data= await fetch(`${rurl}api/websiteData`);
+    // data=await data.json();
 
     // rurl=await rurl.stringify();
-    console.log("type= ",typeof rurl, "data= ",rurl);
+    // console.log("type= ",typeof rurl, "data= ",rurl);
     data.forEach(obj => {
         let div=document.createElement('div');
         afterHeading1.append(div);
@@ -52,7 +53,7 @@ async function process(){
             console.log(damData);
             afterHeading2.innerHTML = `<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px;">${JSON.stringify(damData, null, 2)}</pre>`;
             let reqUrl=document.getElementById('reqUrl');
-            reqUrl.innerHTML = `<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px;">${rurl}${obj.request_path}</pre>`;
+            reqUrl.innerHTML = `<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px;">${obj.request_path}</pre>`;
 
         });
 
